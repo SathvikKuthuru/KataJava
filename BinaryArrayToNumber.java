@@ -1,8 +1,8 @@
 import java.util.List;
 
 public class BinaryArrayToNumber {
-    
-    //Soultion 1
+
+	//Solution 1
     public static int ConvertBinaryArrayToInt(List<Integer> binary) {
         String s = "";
         for(Integer i : binary) s += i;
@@ -27,5 +27,14 @@ public class BinaryArrayToNumber {
            }
         }
         return decimal;
+    }
+    
+    //Solution 3
+    public static int ConvertBinaryArrayToIntThree(List<Integer> binary) {
+        int sum = 0;
+        for(int i = 0; i < binary.size(); i++) {
+        	sum += binary.get(i)*Math.pow(2, binary.size()-i-1);
+        }
+        return sum;
     }
 }
