@@ -17,14 +17,13 @@ class Solution {
 				s += arr[index1] + ",";
 				index1++;
 				index2++;
-				if(index2 == arr.length) s += arr[arr.length-1] + ",";
 			}
 			else {
 				s += arr[index1] + "-" + arr[index2] + ",";
 				index2+=2;
 				index1 = index2-1;
-				if(index2 == arr.length) s += arr[arr.length-1] + ",";
 			}
+			if(index2 == arr.length) s += arr[arr.length-1] + ",";
 		}
 		return s.substring(0, s.length()-1);
 	}
